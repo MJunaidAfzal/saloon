@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurelia Hair &amp; Beauty Studio — Luxury Salon in Mayfair, London</title>
+<meta name="description" content="Award-winning stylists, couture colour, bridal hair and indulgent treatments in our private Mayfair studio. Book your appointment at Aurelia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ============ LOADER (golden arch + opening doors) ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__door loader__door--l"></div>
+  <div class="loader__door loader__door--r"></div>
+  <div class="loader__dust"></div>
+  <div class="loader__inner">
+    <svg class="loader__arch" viewBox="0 0 200 250">
+      <path class="loader__arch-bg" d="M24 244 V112 A76 76 0 0 1 176 112 V244"/>
+      <path class="loader__arch-line" id="loaderArch" d="M24 244 V112 A76 76 0 0 1 176 112 V244"/>
+      <path class="loader__arch-in" d="M38 244 V114 A62 62 0 0 1 162 114 V244"/>
+    </svg>
+    <div class="loader__mid">
+      <div class="loader__word" id="loaderWord"><span>A</span><span>U</span><span>R</span><span>E</span><span>L</span><span>I</span><span>A</span></div>
+      <div class="loader__sub">HAIR &amp; BEAUTY STUDIO</div>
+      <div class="loader__pct"><span id="loaderPct">0</span><small>%</small></div>
+    </div>
+    <div class="loader__msg" id="loaderMsg">Preparing your chair…</div>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<header class="sticky" id="sticky">
+  <div class="sticky__in">
+    <a href="#top" class="slogo"><b>AURELIA</b><small>HAIR &amp; BEAUTY STUDIO</small></a>
+    <nav class="sticky__nav"><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#stylists">Stylists</a><a href="#pricing">Pricing</a></nav>
+    <a href="#book" class="pill pill--gold pill--sm">Book Now <i>→</i></a>
+    <button class="burger" id="burger2" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu">
+  <button class="mmenu__close" id="mmenuClose" aria-label="Close menu"><span></span><span></span></button>
+  <div class="mmenu__logo">AURELIA</div>
+  <nav><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Lookbook</a><a href="#stylists">Stylists</a><a href="#pricing">Pricing</a><a href="#book">Contact</a></nav>
+  <a href="#book" class="pill pill--gold">Book Appointment <i>→</i></a>
+  <a href="tel:+442079460188" class="mmenu__tel">+44 20 7946 0188</a>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__card">
+    <div class="hero__glow"></div>
+    <div class="hero__beam" style="left:19.7%"></div><div class="hero__beam" style="left:80.3%"></div>
+    <div class="hero__arch2"></div><div class="hero__arch"></div>
+    <div class="hero__word" aria-hidden="true" data-hero-parallax="0.18"><span>GLAMOUR</span></div>
+    <div class="hero__model" role="img" aria-label="Model with glossy golden hair"></div>
+    <div class="hero__shade"></div>
+
+    <div class="hero__nav">
+      <nav class="hero__links"><a href="#top" class="on">Home</a><a href="#services">Services</a><a href="#stylists">Stylists</a><a href="#gallery">Gallery</a></nav>
+      <a href="#top" class="hero__logo"><b>AURELIA</b><small>HAIR &amp; BEAUTY STUDIO</small></a>
+      <div class="hero__links hero__links--r"><a href="#pricing">Pricing</a><a href="#book">Contact</a><a href="#book" class="hero__book">Book Now <i>→</i></a>
+        <button class="burger burger--light" id="burger" aria-label="Open menu"><span></span><span></span></button></div>
+    </div>
+
+    <div class="hero__left">
+      <div class="eb">LUXURY SALON · LONDON</div>
+      <h1><span class="ln"><span>Where Every Strand</span></span><span class="ln"><span>Tells a <em>Story</em></span></span></h1>
+      <p>Award-winning stylists, couture colour and indulgent treatments in our private Mayfair studio.</p>
+      <div class="hero__btns"><a href="#book" class="pill pill--gold">Book Appointment <i>→</i></a><a href="#services" class="pill pill--line">Our Services</a></div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Scroll down"><i></i>SCROLL</a>
+
+    <div class="hero__strip">
+      <div class="hs"><span class="hs__ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6L20 18M8.6 16.4L20 6"/></svg></span><div><b>Cut &amp; Style</b><small>Precision cuts</small></div></div>
+      <span class="dia"></span>
+      <div class="hs"><span class="hs__ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 01-12 0c0-3.5 3-7 6-11z"/></svg></span><div><b>Colour</b><small>Balayage &amp; gloss</small></div></div>
+      <span class="dia"></span>
+      <div class="hs"><span class="hs__ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg></span><div><b>Bridal</b><small>Hair &amp; makeup</small></div></div>
+      <span class="dia"></span>
+      <div class="hs"><span class="hs__ic"><svg viewBox="0 0 24 24"><path d="M4 14c4 0 6-3 8-8 2 5 4 8 8 8"/><path d="M4 19h16"/></svg></span><div><b>Hair Spa</b><small>Keratin rituals</small></div></div>
+      <span class="dia"></span>
+      <div class="hs"><span class="hs__ic"><svg viewBox="0 0 24 24"><path d="M9 3h6v9a3 3 0 01-6 0z"/><path d="M12 15v6"/></svg></span><div><b>Nails</b><small>Gel &amp; BIAB</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="band" aria-hidden="true"><div class="band__track">
+  <div class="band__set"><span>Precision Cuts</span><i class="dia"></i><span class="g">Couture Colour</span><i class="dia"></i><span>Balayage</span><i class="dia"></i><span class="g">Bridal Styling</span><i class="dia"></i><span>Keratin Rituals</span><i class="dia"></i><span class="g">Luxury Nails</span><i class="dia"></i><span>Hair Spa</span><i class="dia"></i></div>
+</div></div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section wrap" id="about">
+  <div class="about">
+    <div>
+      <div class="reveal"><div class="eb">WELCOME TO AURELIA</div><h2>The Art of<br><em>Beautiful</em> Hair</h2></div>
+      <p class="lead about__lead reveal" data-delay="1">Tucked away in the heart of Mayfair, Aurelia is a sanctuary for those who expect more from their salon. Our master stylists blend couture technique with the world's finest products — creating looks that feel effortless, timeless and unmistakably you.</p>
+      <div class="feat">
+        <div class="reveal"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></span><div><b>Award Winning</b><small>Recognised among London's finest</small></div></div>
+        <div class="reveal" data-delay="1"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 01-12 0c0-3.5 3-7 6-11z"/></svg></span><div><b>Luxury Products</b><small>Professional, salon-only formulas</small></div></div>
+        <div class="reveal" data-delay="1"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></span><div><b>Master Stylists</b><small>Trained in London &amp; Paris</small></div></div>
+        <div class="reveal" data-delay="2"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg></span><div><b>Private Suites</b><small>Champagne &amp; total privacy</small></div></div>
+      </div>
+      <div class="sig reveal" data-delay="2"><a href="#stylists" class="pill pill--gold">Discover Our Story <i>→</i></a><div><div class="sig__name">Isabella Moreau</div><div class="sig__role">FOUNDER &amp; CREATIVE DIRECTOR</div></div></div>
+    </div>
+    <div class="arches reveal" data-delay="1">
+      <div class="arches__frame"></div>
+      <div class="ph arch arches__a1"><img src="images/about-curls.webp" alt="Stylist curling long hair" loading="lazy" data-parallax-img></div>
+      <div class="ph arch arches__a2"><img src="images/about-portrait.webp" alt="Woman with glossy red hair" loading="lazy"></div>
+      <div class="since"><small>SINCE</small><b>2009</b><span>MAYFAIR</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section section--tight wrap" id="services">
+  <div class="head">
+    <div class="reveal"><div class="eb">OUR SERVICES</div><h2>Signature <em>Rituals</em></h2></div>
+    <p class="lead reveal" data-delay="1">Every appointment begins with a private consultation and ends with a look crafted entirely around you.</p>
+  </div>
+  <div class="svc">
+    <article class="sv reveal"><div class="ph"><img src="images/svc-cut.webp" alt="Stylist blow-drying a client's hair" loading="lazy"></div><span class="sv__num">I</span><div class="sv__bd"><h3>Cut &amp; Style</h3><p>Precision cuts and red-carpet blow-dries sculpted to your features.</p><div class="sv__pr">FROM <b>£65</b></div></div></article>
+    <article class="sv reveal" data-delay="1"><div class="ph"><img src="images/svc-colour.webp" alt="Woman with blonde balayage waves" loading="lazy"></div><span class="sv__num">II</span><div class="sv__bd"><h3>Colour &amp; Balayage</h3><p>Hand-painted balayage and glossing for luminous, lived-in colour.</p><div class="sv__pr">FROM <b>£145</b></div></div></article>
+    <article class="sv reveal" data-delay="2"><div class="ph"><img src="images/svc-bridal.webp" alt="Bride holding a bouquet" loading="lazy" style="object-position:30% center"></div><span class="sv__num">III</span><div class="sv__bd"><h3>Bridal Hair</h3><p>Trials, styling and on-location artistry for your perfect day.</p><div class="sv__pr">FROM <b>£295</b></div></div></article>
+    <article class="sv reveal"><div class="ph"><img src="images/svc-makeup.webp" alt="Makeup artist applying lipstick" loading="lazy"></div><span class="sv__num">IV</span><div class="sv__bd"><h3>Makeup Artistry</h3><p>Flawless, camera-ready looks for every occasion and event.</p><div class="sv__pr">FROM <b>£95</b></div></div></article>
+    <article class="sv reveal" data-delay="1"><div class="ph"><img src="images/svc-spa.webp" alt="Relaxing hair wash at the basin" loading="lazy"></div><span class="sv__num">V</span><div class="sv__bd"><h3>Hair Spa</h3><p>Keratin and bond-repair rituals to restore strength and shine.</p><div class="sv__pr">FROM <b>£85</b></div></div></article>
+    <article class="sv reveal" data-delay="2"><div class="ph"><img src="images/svc-nails.webp" alt="Elegant nude manicure" loading="lazy"></div><span class="sv__num">VI</span><div class="sv__bd"><h3>Luxury Nails</h3><p>Gel, BIAB and bespoke nail art finished to perfection.</p><div class="sv__pr">FROM <b>£45</b></div></div></article>
+  </div>
+  <div class="center reveal" style="margin-top:60px"><a href="#pricing" class="pill pill--line">View Full Menu <i>→</i></a></div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="exp reveal">
+  <div class="exp__bg" data-parallax="0.1"></div><div class="exp__ov"></div>
+  <div class="exp__in">
+    <div class="orn"><i class="dia"></i></div>
+    <h3>An experience designed to make you<br>feel <em>extraordinary</em></h3>
+    <div class="nums">
+      <div><b><span data-count="15">0</span>+</b><span>YEARS OF ARTISTRY</span></div>
+      <div><b><span data-count="25">0</span></b><span>MASTER STYLISTS</span></div>
+      <div><b><span data-count="12">0</span>K</b><span>HAPPY CLIENTS</span></div>
+      <div><b><span data-count="4.9" data-decimals="1">0</span></b><span>GOOGLE RATING</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOOKBOOK ============ -->
+<section class="section wrap" id="gallery">
+  <div class="center reveal"><div class="eb eb--c">THE LOOKBOOK</div><h2>Our Latest <em>Creations</em></h2></div>
+  <div class="gal">
+    <figure class="ph gal__tall arch reveal"><img src="images/look-braid.webp" alt="Braided editorial hairstyle" loading="lazy"><figcaption><b>Braided Elegance</b><small>EDITORIAL</small></figcaption></figure>
+    <figure class="ph reveal" data-delay="1"><img src="images/look-rose.webp" alt="Rose gold coloured hair in motion" loading="lazy"><figcaption><b>Rose Gold Waves</b><small>COLOUR</small></figcaption></figure>
+    <figure class="ph gal__tall arch reveal" data-delay="2"><img src="images/look-hollywood.webp" alt="Old Hollywood glamour waves" loading="lazy"><figcaption><b>Old Hollywood</b><small>STYLING</small></figcaption></figure>
+    <figure class="ph reveal" data-delay="3"><img src="images/look-sleek.webp" alt="Sleek polished long hair" loading="lazy"><figcaption><b>Sleek &amp; Polished</b><small>CUT</small></figcaption></figure>
+    <figure class="ph reveal" data-delay="1"><img src="images/look-volume.webp" alt="Natural curly volume" loading="lazy"><figcaption><b>Natural Volume</b><small>TEXTURE</small></figcaption></figure>
+    <figure class="ph reveal" data-delay="2"><img src="images/look-updo.webp" alt="Modern messy updo" loading="lazy"><figcaption><b>Modern Updo</b><small>BRIDAL</small></figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ STYLISTS ============ -->
+<section class="section section--tight wrap" id="stylists">
+  <div class="head">
+    <div class="reveal"><div class="eb">MEET THE ARTISTS</div><h2>Our Master <em>Stylists</em></h2></div>
+    <a href="#book" class="pill pill--line reveal" data-delay="1">Book a Stylist <i>→</i></a>
+  </div>
+  <div class="team">
+    <div class="mem reveal"><div class="ph"><img src="images/team-sophia.webp" alt="Sophia Laurent" loading="lazy"></div><h4>Sophia Laurent</h4><div class="mem__role">MASTER COLOURIST</div><div class="mem__soc"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div></div>
+    <div class="mem reveal" data-delay="1"><div class="ph"><img src="images/team-james.webp" alt="James Carter" loading="lazy"></div><h4>James Carter</h4><div class="mem__role">CREATIVE STYLIST</div><div class="mem__soc"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div></div>
+    <div class="mem reveal" data-delay="2"><div class="ph"><img src="images/team-emma.webp" alt="Emma Hughes" loading="lazy"></div><h4>Emma Hughes</h4><div class="mem__role">BRIDAL SPECIALIST</div><div class="mem__soc"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div></div>
+    <div class="mem reveal" data-delay="3"><div class="ph"><img src="images/team-olivia.webp" alt="Olivia Bennett" loading="lazy"></div><h4>Olivia Bennett</h4><div class="mem__role">MAKEUP ARTIST</div><div class="mem__soc"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div></div>
+  </div>
+</section>
+
+<!-- ============ PRICE MENU ============ -->
+<section class="section section--flush-top wrap" id="pricing">
+  <div class="menu">
+    <div class="ph menu__img reveal"><img src="images/menu-serum.webp" alt="Drop of nourishing hair serum" loading="lazy" data-parallax-img><div class="menu__tag"><small>THIS MONTH</small><b>Gloss &amp; Glow Ritual — £120</b></div></div>
+    <div>
+      <div class="reveal"><div class="eb">PRICE MENU</div><h2>Treatments &amp; <em>Prices</em></h2></div>
+      <div class="cats reveal" role="tablist">
+        <button class="on" data-cat="hair" role="tab">HAIR</button><button data-cat="colour" role="tab">COLOUR</button><button data-cat="bridal" role="tab">BRIDAL</button><button data-cat="beauty" role="tab">BEAUTY</button>
+      </div>
+      <div class="lists reveal" data-delay="1">
+        <div class="list on" data-list="hair">
+          <div class="it"><div class="row"><b>Signature Cut</b><span class="dots"></span><span class="p">£65</span></div><small>Consultation, wash, cut &amp; finish</small></div>
+          <div class="it"><div class="row"><b>Luxury Blow-Dry</b><span class="dots"></span><span class="p">£45</span></div><small>Bouncy volume or sleek finish</small></div>
+          <div class="it"><div class="row"><b>Keratin Ritual</b><span class="dots"></span><span class="p">£220</span></div><small>Frizz-free shine for 4 months</small></div>
+          <div class="it"><div class="row"><b>Bond Repair</b><span class="dots"></span><span class="p">£55</span></div><small>Strengthening restoration treatment</small></div>
+          <div class="it"><div class="row"><b>Scalp Spa</b><span class="dots"></span><span class="p">£60</span></div><small>Detox, massage &amp; hot towel</small></div>
+          <div class="it"><div class="row"><b>Event Updo</b><span class="dots"></span><span class="p">£85</span></div><small>Elegant styles for special nights</small></div>
+        </div>
+        <div class="list" data-list="colour">
+          <div class="it"><div class="row"><b>Full Balayage</b><span class="dots"></span><span class="p">£185</span></div><small>Hand-painted with toner &amp; gloss</small></div>
+          <div class="it"><div class="row"><b>Root Colour</b><span class="dots"></span><span class="p">£75</span></div><small>Seamless grey coverage</small></div>
+          <div class="it"><div class="row"><b>Full Head Highlights</b><span class="dots"></span><span class="p">£160</span></div><small>Foils for multi-dimensional brightness</small></div>
+          <div class="it"><div class="row"><b>Gloss &amp; Tone</b><span class="dots"></span><span class="p">£55</span></div><small>Refresh shine &amp; neutralise brass</small></div>
+          <div class="it"><div class="row"><b>Colour Correction</b><span class="dots"></span><span class="p">£250+</span></div><small>Bespoke, by consultation</small></div>
+          <div class="it"><div class="row"><b>Vivid Colour</b><span class="dots"></span><span class="p">£140</span></div><small>Pastels, coppers &amp; rose gold</small></div>
+        </div>
+        <div class="list" data-list="bridal">
+          <div class="it"><div class="row"><b>Bridal Trial</b><span class="dots"></span><span class="p">£120</span></div><small>Hair &amp; makeup preview session</small></div>
+          <div class="it"><div class="row"><b>Bridal Hair</b><span class="dots"></span><span class="p">£295</span></div><small>On the day, in-salon or on location</small></div>
+          <div class="it"><div class="row"><b>Bridal Makeup</b><span class="dots"></span><span class="p">£250</span></div><small>Long-wear, camera-ready finish</small></div>
+          <div class="it"><div class="row"><b>Bridesmaid Styling</b><span class="dots"></span><span class="p">£95</span></div><small>Per person, hair or makeup</small></div>
+          <div class="it"><div class="row"><b>Mother of the Bride</b><span class="dots"></span><span class="p">£110</span></div><small>Elegant hair &amp; makeup</small></div>
+          <div class="it"><div class="row"><b>Hair Accessories</b><span class="dots"></span><span class="p">£40</span></div><small>Fitting of veils &amp; pieces</small></div>
+        </div>
+        <div class="list" data-list="beauty">
+          <div class="it"><div class="row"><b>Event Makeup</b><span class="dots"></span><span class="p">£95</span></div><small>Soft glam to full evening look</small></div>
+          <div class="it"><div class="row"><b>Gel Manicure</b><span class="dots"></span><span class="p">£45</span></div><small>Shape, cuticle care &amp; gel polish</small></div>
+          <div class="it"><div class="row"><b>BIAB Nails</b><span class="dots"></span><span class="p">£55</span></div><small>Builder gel for natural strength</small></div>
+          <div class="it"><div class="row"><b>Luxury Pedicure</b><span class="dots"></span><span class="p">£60</span></div><small>Soak, scrub, massage &amp; polish</small></div>
+          <div class="it"><div class="row"><b>Brow Sculpt</b><span class="dots"></span><span class="p">£35</span></div><small>Wax, tint &amp; shape</small></div>
+          <div class="it"><div class="row"><b>Lash Lift</b><span class="dots"></span><span class="p">£65</span></div><small>Lift &amp; tint for 8 weeks</small></div>
+        </div>
+      </div>
+      <div class="note reveal" data-delay="2"><div><b>First visit? Enjoy 20% off</b><small>Complimentary consultation &amp; glass of champagne</small></div><a href="#book" class="pill pill--gold">Book Now <i>→</i></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section section--tight wrap tst-wrap">
+  <div class="tst reveal">
+    <div class="eb eb--c">CLIENT LOVE</div>
+    <div class="tst__q">“</div>
+    <div class="tst__stage" id="tstStage">
+      <blockquote class="tst__item on">Aurelia isn't just a salon — it's an <em>experience</em>. Sophia transformed my hair into something I never thought possible. I left feeling like the most beautiful version of myself.</blockquote>
+      <blockquote class="tst__item">My bridal hair was <em>absolute perfection</em>. Emma listened to every detail, the trial was relaxed and on the day I felt like royalty from morning to midnight.</blockquote>
+      <blockquote class="tst__item">The best balayage I've had in London. Natural, glossy and <em>effortlessly elegant</em> — and the champagne and head massage didn't hurt either.</blockquote>
+      <blockquote class="tst__item">I've finally found my salon. James understands exactly what suits me, and the private suite makes every visit feel like <em>a little escape</em>.</blockquote>
+      <blockquote class="tst__item">From the warm welcome to the flawless finish, everything here is <em>world-class</em>. Sharpest cut I have had in years — I will not go anywhere else.</blockquote>
+    </div>
+    <div class="stars">★★★★★</div>
+    <div class="who" id="tstWho"><b>Charlotte Davies</b><small>KENSINGTON, LONDON</small></div>
+    <div class="avs" id="tstAvs">
+      <button data-q="3" data-name="Daniel Shaw" data-place="CHELSEA, LONDON" aria-label="Review by Daniel Shaw"><img src="images/client-daniel.webp" alt=""></button>
+      <button data-q="1" data-name="Emily Clarke" data-place="RICHMOND, LONDON" aria-label="Review by Emily Clarke"><img src="images/client-emma.webp" alt=""></button>
+      <button class="on" data-q="0" data-name="Charlotte Davies" data-place="KENSINGTON, LONDON" aria-label="Review by Charlotte Davies"><img src="images/client-charlotte.webp" alt=""></button>
+      <button data-q="4" data-name="Marcus Hale" data-place="NOTTING HILL, LONDON" aria-label="Review by Marcus Hale"><img src="images/client-marcus.webp" alt=""></button>
+      <button data-q="2" data-name="Olivia Grant" data-place="MARYLEBONE, LONDON" aria-label="Review by Olivia Grant"><img src="images/client-olivia.webp" alt=""></button>
+    </div>
+  </div>
+  <div class="press reveal"><small>AS FEATURED IN</small><span>LUXE</span><span>ÉLITE</span><span>MAISON</span><span>BELLE</span><span>ALLURE</span></div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="book reveal" id="book">
+  <div class="ph book__img"><img src="images/book-salon.webp" alt="Inside the Aurelia salon" loading="lazy" data-parallax-img></div>
+  <div>
+    <div class="eb">RESERVATIONS</div>
+    <h2>Reserve Your <em>Chair</em></h2>
+    <p class="lead book__lead">Choose your treatment, stylist and time — our concierge will confirm your appointment within the hour.</p>
+    <form class="bform" id="bform" novalidate>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select required><option value="">Select Service</option><option>Cut &amp; Style</option><option>Colour &amp; Balayage</option><option>Bridal Hair</option><option>Makeup Artistry</option><option>Hair Spa</option><option>Luxury Nails</option></select>
+      <select><option value="">Preferred Stylist</option><option>Sophia Laurent</option><option>James Carter</option><option>Emma Hughes</option><option>Olivia Bennett</option><option>No preference</option></select>
+      <input type="date" aria-label="Date" required>
+      <select aria-label="Time"><option value="">Time</option><option>09:00</option><option>10:30</option><option>12:00</option><option>14:15</option><option>16:45</option><option>18:30</option></select>
+      <button type="submit" class="pill pill--gold">Confirm Reservation <i>→</i></button>
+      <div class="bform__note" id="bnote"></div>
+    </form>
+    <div class="contact">
+      <a href="tel:+442079460188"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg></span><span><small>CALL US</small><b>+44 20 7946 0188</b></span></a>
+      <div><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 00-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span><small>VISIT US</small><b>18 Mount Street, Mayfair</b></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<div class="insta">
+  <a href="#" class="ph"><img src="images/ig-1.webp" alt="Glitter nail art" loading="lazy"></a>
+  <a href="#" class="ph"><img src="images/ig-2.webp" alt="Makeup flat lay" loading="lazy"></a>
+  <a href="#" class="ph"><img src="images/ig-3.webp" alt="Makeup brushes" loading="lazy"></a>
+  <a href="#" class="ph"><img src="images/ig-4.webp" alt="Spa relaxation room" loading="lazy"></a>
+  <a href="#" class="ph"><img src="images/ig-5.webp" alt="Citrus facial treatment" loading="lazy"></a>
+  <a href="#" class="ph"><img src="images/ig-6.webp" alt="Blow-dry styling" loading="lazy"></a>
+  <a href="#" class="ig"><b>Follow Our Story</b><small>@AURELIA.STUDIO</small></a>
+</div>
+</main>
+
+<footer class="footer">
+  <a href="#top" class="flogo"><b>AURELIA</b><small>HAIR &amp; BEAUTY STUDIO</small></a>
+  <nav class="fnav"><a href="#top">HOME</a><a href="#services">SERVICES</a><a href="#stylists">STYLISTS</a><a href="#gallery">GALLERY</a><a href="#pricing">PRICING</a><a href="#book">CONTACT</a></nav>
+  <div class="fcols">
+    <div><h5>VISIT US</h5><p>18 Mount Street, Mayfair<br>London W1K 2RN<br>+44 20 7946 0188</p></div>
+    <div><h5>OPENING HOURS</h5><p>Monday – Friday · 9am – 8pm<br>Saturday · 9am – 6pm<br>Sunday · 10am – 4pm</p></div>
+    <div><h5>STAY INSPIRED</h5><p>Exclusive offers &amp; beauty notes</p>
+      <form class="news" id="news" novalidate><input type="email" placeholder="Your email address" aria-label="Email for newsletter"><button type="submit">SUBSCRIBE</button></form>
+      <div class="soc"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="YouTube">YT</a></div></div>
+  </div>
+  <div class="fbot"><span>© 2026 Aurelia Hair &amp; Beauty Studio. All rights reserved.</span><span>Privacy Policy · Terms of Service</span></div>
+</footer>
+
+<a href="#top" class="totop" id="totop" aria-label="Back to top"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="21"/><circle cx="24" cy="24" r="21" id="totopRing"/></svg><span>↑</span></a>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

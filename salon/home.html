@@ -1,0 +1,344 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#d4ae6c;--gold2:#f3d9a4;--gold3:#9c7838;--ink:#a79e92;--bg:#0b0a09;--bg2:#12100d;--card:#16130f;--line:rgba(212,174,108,.24);--gg:linear-gradient(135deg,#f6dfae,#cfa060)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1600px;background:var(--bg);font-family:Jost,sans-serif;color:#f4efe8;-webkit-font-smoothing:antialiased}
+img{display:block}
+.hero{width:1600px;height:1000px;background:url(hero2x.png) 0 0/1600px 1000px}
+.wrap{padding-left:80px;padding-right:80px}
+section{padding:130px 0;position:relative}
+.eb{display:inline-flex;align-items:center;gap:14px;font-size:13px;letter-spacing:.4em;color:var(--gold);font-weight:500;text-transform:uppercase}
+.eb:before,.eb.c:after{content:"";width:40px;height:1px;background:var(--gold)}
+h2{font-family:"Playfair Display",serif;font-weight:500;font-size:72px;line-height:1.08;margin-top:22px;color:#f6f0e6}
+h2 em{font-family:"Pinyon Script",cursive;font-style:normal;font-weight:400;color:var(--gold2);font-size:1.25em;line-height:.6}
+.lead{color:var(--ink);font-size:18px;line-height:1.8;font-weight:300}
+.center{text-align:center}
+.pill{display:inline-flex;align-items:center;gap:12px;height:58px;padding:0 8px 0 28px;border-radius:40px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.pill i{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:17px}
+.pill.g{background:var(--gg);color:#1a140c;box-shadow:0 14px 34px rgba(212,174,108,.25)}.pill.g i{background:#1a140c;color:var(--gold2)}
+.pill.o{border:1px solid rgba(243,217,164,.5);color:#f1e8da}.pill.o i{border:1px solid var(--gold);color:var(--gold2)}
+.ph{position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;filter:sepia(.2) saturate(.88) contrast(1.08) brightness(.86)}
+.arch{border-radius:999px 999px 18px 18px}
+.dia{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);display:inline-block}
+.orn{display:flex;align-items:center;justify-content:center;gap:14px}
+.orn:before,.orn:after{content:"";width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn:after{transform:scaleX(-1)}
+svg.s{width:24px;height:24px;stroke:var(--gold2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* marquee band */
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(90deg,#0f0d0b,#17130e,#0f0d0b);height:96px;display:flex;align-items:center;justify-content:center;gap:44px;white-space:nowrap;overflow:hidden;margin-top:40px}
+.band span{font-family:"Playfair Display",serif;font-style:italic;font-size:30px;color:#efe4d2}
+.band span.g{color:var(--gold2)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 640px;gap:100px;align-items:center}
+.about .lead{margin-top:28px;max-width:600px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:26px 40px;margin:42px 0 46px;max-width:620px}
+.feat div{display:flex;gap:16px}
+.feat .ic{width:52px;height:52px;border-radius:50%;border:1px solid rgba(212,174,108,.45);display:flex;align-items:center;justify-content:center;flex:none}
+.feat b{display:block;font-family:"Playfair Display",serif;font-weight:500;font-size:21px;color:#f4ece0}
+.feat small{color:var(--ink);font-size:15px;line-height:1.55;display:block;margin-top:4px}
+.sig{display:flex;align-items:center;gap:26px}
+.sig .name{font-family:"Pinyon Script",cursive;font-size:44px;color:var(--gold2);line-height:1}
+.sig .role{font-size:12px;letter-spacing:.3em;color:var(--ink);margin-top:6px}
+.arches{position:relative;height:760px}
+.arches .a1{position:absolute;right:0;top:0;width:430px;height:640px;border:1px solid var(--line)}
+.arches .a2{position:absolute;left:0;bottom:0;width:290px;height:420px;border:8px solid var(--bg)}
+.arches .frame{position:absolute;right:-18px;top:-18px;width:466px;height:676px;border:1px solid rgba(243,217,164,.35);border-radius:999px 999px 26px 26px}
+.since{position:absolute;left:70px;top:90px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2a231b,#120f0c);border:1px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.since small{font-size:11px;letter-spacing:.34em;color:var(--gold)}
+.since b{font-family:"Playfair Display",serif;font-weight:500;font-size:54px;color:var(--gold2);line-height:1.05}
+.since span{font-size:11px;letter-spacing:.3em;color:var(--ink)}
+
+/* services */
+.svc-h{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:70px}
+.svc-h .lead{max-width:440px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.sv{background:linear-gradient(180deg,#17140f,#100e0b);border:1px solid var(--line);border-radius:999px 999px 26px 26px;padding:16px 16px 34px;position:relative}
+.sv .ph{height:400px;border-radius:999px 999px 18px 18px}
+.sv .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,10,9,.75))}
+.sv .num{position:absolute;left:50%;top:388px;transform:translateX(-50%);width:62px;height:62px;border-radius:50%;background:#120f0c;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-style:italic;font-size:22px;color:var(--gold2);z-index:2}
+.sv .bd{text-align:center;padding:52px 18px 0}
+.sv h3{font-family:"Playfair Display",serif;font-weight:500;font-size:30px;color:#f6f0e6}
+.sv p{color:var(--ink);font-size:16px;line-height:1.7;margin-top:12px;font-weight:300}
+.sv .pr{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px;font-size:13px;letter-spacing:.22em;color:var(--ink)}
+.sv .pr b{font-family:"Playfair Display",serif;font-size:24px;letter-spacing:0;color:var(--gold2);font-weight:500}
+
+/* stats band */
+.exp{position:relative;height:560px;margin:0 40px;border-radius:36px;overflow:hidden;border:1px solid var(--line)}
+.exp .ph{position:absolute;inset:0}
+.exp .ph img{filter:sepia(.35) saturate(.7) brightness(.42) contrast(1.1)}
+.exp .ov{position:absolute;inset:0;background:radial-gradient(800px 400px at 50% 50%,rgba(212,174,108,.12),transparent 70%),linear-gradient(180deg,rgba(11,10,9,.3),rgba(11,10,9,.8))}
+.exp .in{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.exp h3{font-family:"Playfair Display",serif;font-weight:400;font-size:52px;line-height:1.2;max-width:1000px}
+.exp h3 em{font-family:"Pinyon Script",cursive;font-style:normal;color:var(--gold2);font-size:1.3em}
+.nums{display:grid;grid-template-columns:repeat(4,240px);margin-top:56px}
+.nums div{border-right:1px solid var(--line);padding:0 20px}
+.nums div:last-child{border:0}
+.nums b{display:block;font-family:"Playfair Display",serif;font-weight:500;font-size:64px;color:var(--gold2);line-height:1}
+.nums span{display:block;margin-top:12px;font-size:13px;letter-spacing:.3em;color:#e9e0d2}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1.2fr 1fr 1fr;grid-template-rows:330px 330px;gap:22px;margin-top:70px}
+.gal .ph{border-radius:22px;border:1px solid var(--line)}
+.gal .ph img{filter:sepia(.3) saturate(.78) contrast(1.1) brightness(.8)}
+.gal .tall{grid-row:span 2}
+.gal .arch{border-radius:999px 999px 22px 22px}
+.gal .cap{position:absolute;left:24px;bottom:22px;z-index:2}
+.gal .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,10,9,.8))}
+.gal .cap b{display:block;font-family:"Pinyon Script",cursive;font-weight:400;font-size:34px;color:var(--gold2);line-height:1}
+.gal .cap small{font-size:12px;letter-spacing:.3em;color:#e9e0d2}
+
+/* stylists */
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:70px}
+.mem{text-align:center}
+.mem .ph{height:440px;border-radius:999px 999px 20px 20px;border:1px solid var(--line)}
+.mem .ph img{filter:sepia(.38) saturate(.72) contrast(1.1) brightness(.72)}
+.mem .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(11,10,9,.6))}
+.mem h4{font-family:"Playfair Display",serif;font-weight:500;font-size:26px;margin-top:26px}
+.mem .role{font-size:12.5px;letter-spacing:.3em;color:var(--gold);margin-top:8px}
+.mem .soc{display:flex;justify-content:center;gap:10px;margin-top:18px}
+.mem .soc i{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;color:var(--gold2);letter-spacing:.05em}
+
+/* price menu */
+.menu{display:grid;grid-template-columns:560px 1fr;gap:90px;align-items:stretch}
+.menu .ph{border-radius:999px 999px 26px 26px;border:1px solid var(--line);min-height:820px}
+.menu .ph .tag{position:absolute;left:50%;bottom:40px;transform:translateX(-50%);z-index:2;text-align:center;background:rgba(15,13,11,.78);border:1px solid var(--line);backdrop-filter:blur(10px);padding:22px 34px;border-radius:20px;width:max-content}
+.menu .tag small{font-size:12px;letter-spacing:.32em;color:var(--gold)}
+.menu .tag b{display:block;font-family:"Playfair Display",serif;font-weight:500;font-size:26px;margin-top:6px}
+.cats{display:flex;gap:12px;margin-top:40px}
+.cats span{padding:12px 24px;border-radius:30px;border:1px solid var(--line);font-size:13px;letter-spacing:.2em;color:#d8cfc1}
+.cats span.on{background:var(--gg);color:#1a140c;font-weight:600;border-color:transparent}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:6px 60px;margin-top:40px}
+.it{padding:22px 0;border-bottom:1px solid rgba(212,174,108,.14)}
+.it .row{display:flex;align-items:baseline;gap:12px}
+.it b{font-family:"Playfair Display",serif;font-weight:500;font-size:22px;white-space:nowrap}
+.it .dots{flex:1;border-bottom:1px dotted rgba(212,174,108,.45);transform:translateY(-6px)}
+.it .p{font-family:"Playfair Display",serif;font-size:22px;color:var(--gold2);white-space:nowrap}
+.it small{display:block;color:var(--ink);font-size:14.5px;margin-top:6px;font-weight:300}
+.menu .note{display:flex;align-items:center;justify-content:space-between;margin-top:44px;padding:28px 32px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,rgba(212,174,108,.1),transparent)}
+.note b{font-family:"Playfair Display",serif;font-weight:500;font-size:24px}
+.note small{display:block;color:var(--ink);font-size:15px;margin-top:4px}
+
+/* testimonial */
+.tst{text-align:center;max-width:1100px;margin:0 auto}
+.q{font-family:"Playfair Display",serif;font-size:180px;line-height:.5;color:var(--gold);height:70px;margin-top:40px}
+.tst blockquote{font-family:"Playfair Display",serif;font-weight:400;font-style:italic;font-size:38px;line-height:1.5;color:#f1e9dc;margin-top:20px}
+.tst blockquote em{color:var(--gold2)}
+.stars{color:var(--gold);letter-spacing:6px;font-size:18px;margin-top:40px}
+.who{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:22px}
+.who img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:1.5px solid var(--gold);filter:sepia(.3) saturate(.8)}
+.who b{display:block;font-family:"Playfair Display",serif;font-weight:500;font-size:22px;text-align:left}
+.who small{color:var(--ink);font-size:14px;letter-spacing:.2em}
+.avs{display:flex;justify-content:center;gap:16px;margin-top:46px;align-items:center}
+.avs img{width:54px;height:54px;border-radius:50%;object-fit:cover;opacity:.45;filter:grayscale(.4)}
+.avs img.on{width:70px;height:70px;opacity:1;filter:none;border:2px solid var(--gold)}
+.press{display:flex;justify-content:center;align-items:center;gap:70px;margin-top:90px;padding-top:50px;border-top:1px solid var(--line)}
+.press span{font-family:"Playfair Display",serif;font-size:26px;letter-spacing:.24em;color:#6f675c}
+.press small{font-size:12px;letter-spacing:.4em;color:var(--gold)}
+
+/* booking */
+.book{margin:0 40px;border-radius:36px;border:1px solid var(--line);background:radial-gradient(700px 500px at 20% 40%,rgba(212,174,108,.12),transparent 70%),linear-gradient(135deg,#17130f,#0d0b09);display:grid;grid-template-columns:600px 1fr;gap:80px;padding:70px 80px;align-items:center;overflow:hidden;position:relative}
+.book .ph img{filter:sepia(.4) saturate(.7) contrast(1.12) brightness(.62)}
+.book .ph{height:640px;border-radius:999px 999px 26px 26px;border:1px solid var(--line)}
+.book .lead{margin-top:20px;max-width:560px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px}
+.fi{height:62px;border-radius:14px;border:1px solid rgba(212,174,108,.25);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:space-between;padding:0 22px;color:#9b9284;font-size:15.5px}
+.fi.full{grid-column:1/-1}
+.fi svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round}
+.book .pill{margin-top:28px}
+.contact{display:flex;gap:50px;margin-top:40px;padding-top:30px;border-top:1px solid rgba(212,174,108,.16)}
+.contact div{display:flex;gap:14px;align-items:center}
+.contact .ic{width:48px;height:48px;border-radius:50%;border:1px solid rgba(212,174,108,.45);display:flex;align-items:center;justify-content:center}
+.contact small{display:block;font-size:12px;letter-spacing:.24em;color:var(--gold)}
+.contact b{font-weight:500;font-size:17px}
+
+/* instagram */
+.insta{display:grid;grid-template-columns:repeat(6,1fr);margin-top:130px;position:relative}
+.insta .ph{height:266px}
+.insta .ph img{filter:sepia(.4) saturate(.7) brightness(.55) contrast(1.1)}
+.ig{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;background:#0f0d0b;border:1px solid var(--gold);border-radius:999px;padding:24px 48px;text-align:center}
+.ig b{display:block;font-family:"Pinyon Script",cursive;font-weight:400;font-size:42px;color:var(--gold2);line-height:1}
+.ig small{font-size:13px;letter-spacing:.34em;color:#e9e0d2}
+
+/* footer */
+footer{background:#080706;padding:100px 80px 40px;border-top:1px solid var(--line)}
+.flogo{text-align:center}
+.flogo b{display:block;font-family:"Playfair Display",serif;font-weight:500;font-size:52px;letter-spacing:.34em;color:var(--gold2);padding-left:.34em}
+.flogo small{display:flex;align-items:center;gap:12px;justify-content:center;font-size:12px;letter-spacing:.5em;color:#cfc6b8;margin-top:12px}
+.flogo small:before,.flogo small:after{content:"";width:34px;height:1px;background:var(--gold)}
+.fnav{display:flex;justify-content:center;gap:46px;margin-top:40px;font-size:14px;letter-spacing:.2em;color:#e3dacb}
+.fcols{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid rgba(212,174,108,.14);border-bottom:1px solid rgba(212,174,108,.14)}
+.fcols>div{padding:46px 40px;text-align:center;border-right:1px solid rgba(212,174,108,.14)}
+.fcols>div:last-child{border:0}
+.fcols h5{font-size:13px;letter-spacing:.34em;color:var(--gold);font-weight:500;margin-bottom:20px}
+.fcols p{color:#cfc6b8;font-size:16px;line-height:1.9;font-weight:300}
+.news{display:flex;margin-top:18px;border:1px solid rgba(212,174,108,.3);border-radius:40px;padding:5px 5px 5px 22px;align-items:center}
+.news span{flex:1;text-align:left;color:#8b8376;font-size:15px}
+.news b{background:var(--gg);color:#1a140c;border-radius:30px;padding:13px 22px;font-size:12px;letter-spacing:.2em}
+.soc2{display:flex;justify-content:center;gap:12px;margin-top:20px}
+.soc2 i{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;color:var(--gold2)}
+.fbot{display:flex;justify-content:space-between;margin-top:34px;color:#6f675c;font-size:14px;letter-spacing:.06em}
+</style></head><body>
+
+<div class="hero"></div>
+
+<!-- MARQUEE -->
+<div class="band">
+  <span>Precision Cuts</span><i class="dia"></i><span class="g">Couture Colour</span><i class="dia"></i><span>Balayage</span><i class="dia"></i><span class="g">Bridal Styling</span><i class="dia"></i><span>Keratin Rituals</span><i class="dia"></i><span class="g">Luxury Nails</span><i class="dia"></i><span>Hair Spa</span>
+</div>
+
+<!-- ABOUT -->
+<section class="wrap"><div class="about">
+  <div>
+    <div class="eb">Welcome to Aurelia</div>
+    <h2>The Art of<br><em>Beautiful</em> Hair</h2>
+    <p class="lead">Tucked away in the heart of Mayfair, Aurelia is a sanctuary for those who expect more from their salon. Our master stylists blend couture technique with the world's finest products — creating looks that feel effortless, timeless and unmistakably you.</p>
+    <div class="feat">
+      <div><span class="ic"><svg class="s" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5L7 22l5-3 5 3-1.5-9.5"/></svg></span><div><b>Award Winning</b><small>Recognised among London's finest</small></div></div>
+      <div><span class="ic"><svg class="s" viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 01-12 0c0-3.5 3-7 6-11z"/></svg></span><div><b>Luxury Products</b><small>Oribe, Kérastase &amp; Olaplex</small></div></div>
+      <div><span class="ic"><svg class="s" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></span><div><b>Master Stylists</b><small>Trained in London &amp; Paris</small></div></div>
+      <div><span class="ic"><svg class="s" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg></span><div><b>Private Suites</b><small>Champagne &amp; total privacy</small></div></div>
+    </div>
+    <div class="sig"><span class="pill g">Discover Our Story <i>→</i></span><div><div class="name">Isabella Moreau</div><div class="role">FOUNDER &amp; CREATIVE DIRECTOR</div></div></div>
+  </div>
+  <div class="arches">
+    <div class="frame"></div>
+    <div class="ph arch a1"><img src="p/1560869713-7d0a29430803.jpg"></div>
+    <div class="ph arch a2"><img src="p/1526510747491-58f928ec870f.jpg"></div>
+    <div class="since"><small>SINCE</small><b>2009</b><span>MAYFAIR</span></div>
+  </div>
+</div></section>
+
+<!-- SERVICES -->
+<section class="wrap" style="padding-top:20px">
+  <div class="svc-h">
+    <div><div class="eb">Our Services</div><h2>Signature <em>Rituals</em></h2></div>
+    <p class="lead">Every appointment begins with a private consultation and ends with a look crafted entirely around you.</p>
+  </div>
+  <div class="svc">
+    <div class="sv"><div class="ph"><img src="p/1562322140-8baeececf3df.jpg"></div><span class="num">I</span><div class="bd"><h3>Cut &amp; Style</h3><p>Precision cuts and red-carpet blow-dries sculpted to your features.</p><div class="pr">FROM <b>£65</b></div></div></div>
+    <div class="sv"><div class="ph"><img src="p/1504439904031-93ded9f93e4e.jpg"></div><span class="num">II</span><div class="bd"><h3>Colour &amp; Balayage</h3><p>Hand-painted balayage and glossing for luminous, lived-in colour.</p><div class="pr">FROM <b>£145</b></div></div></div>
+    <div class="sv"><div class="ph"><img src="p/1519741497674-611481863552.jpg" style="object-position:30% center"></div><span class="num">III</span><div class="bd"><h3>Bridal Hair</h3><p>Trials, styling and on-location artistry for your perfect day.</p><div class="pr">FROM <b>£295</b></div></div></div>
+    <div class="sv"><div class="ph"><img src="p/1487412947147-5cebf100ffc2.jpg"></div><span class="num">IV</span><div class="bd"><h3>Makeup Artistry</h3><p>Flawless, camera-ready looks for every occasion and event.</p><div class="pr">FROM <b>£95</b></div></div></div>
+    <div class="sv"><div class="ph"><img src="p/1634449571010-02389ed0f9b0.jpg"></div><span class="num">V</span><div class="bd"><h3>Hair Spa</h3><p>Keratin, Olaplex and scalp rituals to restore strength and shine.</p><div class="pr">FROM <b>£85</b></div></div></div>
+    <div class="sv"><div class="ph"><img src="p/1610992015732-2449b76344bc.jpg"></div><span class="num">VI</span><div class="bd"><h3>Luxury Nails</h3><p>Gel, BIAB and bespoke nail art finished to perfection.</p><div class="pr">FROM <b>£45</b></div></div></div>
+  </div>
+  <div class="center" style="margin-top:60px"><span class="pill o">View Full Menu <i>→</i></span></div>
+</section>
+
+<!-- EXPERIENCE / STATS -->
+<div class="exp">
+  <div class="ph"><img src="p/1633681926022-84c23e8cb2d6.jpg"></div><div class="ov"></div>
+  <div class="in">
+    <div class="orn"><i class="dia"></i></div>
+    <h3 style="margin-top:26px">An experience designed to make you<br>feel <em>extraordinary</em></h3>
+    <div class="nums"><div><b>15+</b><span>YEARS OF ARTISTRY</span></div><div><b>25</b><span>MASTER STYLISTS</span></div><div><b>12K</b><span>HAPPY CLIENTS</span></div><div><b>4.9</b><span>GOOGLE RATING</span></div></div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="wrap">
+  <div class="center"><div class="eb c">The Lookbook</div><h2>Our Latest <em>Creations</em></h2></div>
+  <div class="gal">
+    <div class="ph tall arch"><img src="p/1502823403499-6ccfcf4fb453.jpg"><div class="cap"><b>Braided Elegance</b><small>EDITORIAL</small></div></div>
+    <div class="ph"><img src="p/1470259078422-826894b933aa.jpg"><div class="cap"><b>Rose Gold Waves</b><small>COLOUR</small></div></div>
+    <div class="ph tall arch"><img src="p/1542206395-9feb3edaa68d.jpg"><div class="cap"><b>Old Hollywood</b><small>STYLING</small></div></div>
+    <div class="ph"><img src="p/1611042553365-9b101441c135.jpg"><div class="cap"><b>Sleek &amp; Polished</b><small>CUT</small></div></div>
+    <div class="ph"><img src="p/1519699047748-de8e457a634e.jpg"><div class="cap"><b>Natural Volume</b><small>TEXTURE</small></div></div>
+    <div class="ph"><img src="p/1531746020798-e6953c6e8e04.jpg"><div class="cap"><b>Modern Updo</b><small>BRIDAL</small></div></div>
+  </div>
+</section>
+
+<!-- STYLISTS -->
+<section class="wrap" style="padding-top:20px">
+  <div class="svc-h" style="margin-bottom:0">
+    <div><div class="eb">Meet The Artists</div><h2>Our Master <em>Stylists</em></h2></div>
+    <span class="pill o">Meet The Team <i>→</i></span>
+  </div>
+  <div class="team">
+    <div class="mem"><div class="ph"><img src="p/1494790108377-be9c29b29330.jpg"></div><h4>Sophia Laurent</h4><div class="role">MASTER COLOURIST</div><div class="soc"><i>IG</i><i>FB</i><i>TT</i></div></div>
+    <div class="mem"><div class="ph"><img src="p/1507003211169-0a1dd7228f2d.jpg"></div><h4>James Carter</h4><div class="role">CREATIVE STYLIST</div><div class="soc"><i>IG</i><i>FB</i><i>TT</i></div></div>
+    <div class="mem"><div class="ph"><img src="p/1508214751196-bcfd4ca60f91.jpg"></div><h4>Emma Hughes</h4><div class="role">BRIDAL SPECIALIST</div><div class="soc"><i>IG</i><i>FB</i><i>TT</i></div></div>
+    <div class="mem"><div class="ph"><img src="p/1438761681033-6461ffad8d80.jpg"></div><h4>Olivia Bennett</h4><div class="role">MAKEUP ARTIST</div><div class="soc"><i>IG</i><i>FB</i><i>TT</i></div></div>
+  </div>
+</section>
+
+<!-- PRICE MENU -->
+<section class="wrap" style="padding-top:0"><div class="menu">
+  <div class="ph"><img src="p/1515377905703-c4788e51af15.jpg"><div class="tag"><small>THIS MONTH</small><b>Gloss &amp; Glow Ritual — £120</b></div></div>
+  <div>
+    <div class="eb">Price Menu</div><h2>Treatments &amp; <em>Prices</em></h2>
+    <div class="cats"><span class="on">HAIR</span><span>COLOUR</span><span>BRIDAL</span><span>BEAUTY</span></div>
+    <div class="list">
+      <div class="it"><div class="row"><b>Signature Cut</b><span class="dots"></span><span class="p">£65</span></div><small>Consultation, wash, cut &amp; finish</small></div>
+      <div class="it"><div class="row"><b>Luxury Blow-Dry</b><span class="dots"></span><span class="p">£45</span></div><small>Bouncy volume or sleek finish</small></div>
+      <div class="it"><div class="row"><b>Full Balayage</b><span class="dots"></span><span class="p">£185</span></div><small>Hand-painted with toner &amp; gloss</small></div>
+      <div class="it"><div class="row"><b>Root Colour</b><span class="dots"></span><span class="p">£75</span></div><small>Seamless grey coverage</small></div>
+      <div class="it"><div class="row"><b>Keratin Ritual</b><span class="dots"></span><span class="p">£220</span></div><small>Frizz-free shine for 4 months</small></div>
+      <div class="it"><div class="row"><b>Olaplex Repair</b><span class="dots"></span><span class="p">£55</span></div><small>Bond-building restoration</small></div>
+      <div class="it"><div class="row"><b>Bridal Trial</b><span class="dots"></span><span class="p">£120</span></div><small>Hair &amp; makeup preview session</small></div>
+      <div class="it"><div class="row"><b>Event Updo</b><span class="dots"></span><span class="p">£85</span></div><small>Elegant styles for special nights</small></div>
+    </div>
+    <div class="note"><div><b>First visit? Enjoy 20% off</b><small>Complimentary consultation &amp; glass of champagne</small></div><span class="pill g">Book Now <i>→</i></span></div>
+  </div>
+</div></section>
+
+<!-- TESTIMONIAL -->
+<section class="wrap" style="padding-top:20px;background:radial-gradient(700px 400px at 50% 40%,rgba(212,174,108,.08),transparent 70%)">
+  <div class="tst">
+    <div class="eb c">Client Love</div>
+    <div class="q">“</div>
+    <blockquote>Aurelia isn't just a salon — it's an <em>experience</em>. Sophia transformed my hair into something I never thought possible. I left feeling like the most beautiful version of myself.</blockquote>
+    <div class="stars">★★★★★</div>
+    <div class="who"><img src="p/1534528741775-53994a69daeb.jpg"><div><b>Charlotte Davies</b><small>KENSINGTON, LONDON</small></div></div>
+    <div class="avs"><img src="p/1500648767791-00dcc994a43e.jpg"><img src="p/1508214751196-bcfd4ca60f91.jpg"><img class="on" src="p/1534528741775-53994a69daeb.jpg"><img src="p/1605980776566-0486c3ac7617.jpg"><img src="p/1438761681033-6461ffad8d80.jpg"></div>
+  </div>
+  <div class="press"><small>AS FEATURED IN</small><span>LUXE</span><span>ÉLITE</span><span>MAISON</span><span>BELLE</span><span>ALLURE</span></div>
+</section>
+
+<!-- BOOKING -->
+<div class="book">
+  <div class="ph"><img src="p/1560066984-138dadb4c035.jpg"></div>
+  <div>
+    <div class="eb">Reservations</div>
+    <h2>Reserve Your <em>Chair</em></h2>
+    <p class="lead">Choose your treatment, stylist and time — our concierge will confirm your appointment within the hour.</p>
+    <div class="fgrid">
+      <div class="fi">Full Name</div><div class="fi">Phone Number</div>
+      <div class="fi">Select Service <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div><div class="fi">Preferred Stylist <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></div>
+      <div class="fi">Date <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div class="fi">Time <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+    </div>
+    <span class="pill g">Confirm Reservation <i>→</i></span>
+    <div class="contact">
+      <div><span class="ic"><svg class="s" viewBox="0 0 24 24" style="width:20px;height:20px"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></svg></span><div><small>CALL US</small><b>+44 20 7946 0188</b></div></div>
+      <div><span class="ic"><svg class="s" viewBox="0 0 24 24" style="width:20px;height:20px"><path d="M12 21s7-6.5 7-12a7 7 0 00-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div><small>VISIT US</small><b>18 Mount Street, Mayfair</b></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- INSTAGRAM -->
+<div class="insta">
+  <div class="ph"><img src="p/1607779097040-26e80aa78e66.jpg"></div>
+  <div class="ph"><img src="p/1596462502278-27bfdc403348.jpg"></div>
+  <div class="ph"><img src="p/1526045478516-99145907023c.jpg"></div>
+  <div class="ph"><img src="p/1560750588-73207b1ef5b8.jpg"></div>
+  <div class="ph"><img src="p/1505944270255-72b8c68c6a70.jpg"></div>
+  <div class="ph"><img src="p/1580618672591-eb180b1a973f.jpg"></div>
+  <div class="ig"><b>Follow Our Story</b><small>@AURELIA.STUDIO</small></div>
+</div>
+
+<footer>
+  <div class="flogo"><b>AURELIA</b><small>HAIR &amp; BEAUTY STUDIO</small></div>
+  <div class="fnav"><span>HOME</span><span>SERVICES</span><span>STYLISTS</span><span>GALLERY</span><span>PRICING</span><span>CONTACT</span></div>
+  <div class="fcols">
+    <div><h5>VISIT US</h5><p>18 Mount Street, Mayfair<br>London W1K 2RN<br>+44 20 7946 0188</p></div>
+    <div><h5>OPENING HOURS</h5><p>Monday – Friday · 9am – 8pm<br>Saturday · 9am – 6pm<br>Sunday · 10am – 4pm</p></div>
+    <div><h5>STAY INSPIRED</h5><p>Exclusive offers &amp; beauty notes</p><div class="news"><span>Your email address</span><b>SUBSCRIBE</b></div><div class="soc2"><i>IG</i><i>FB</i><i>TT</i><i>YT</i></div></div>
+  </div>
+  <div class="fbot"><span>© 2026 Aurelia Hair &amp; Beauty Studio. All rights reserved.</span><span>Privacy Policy · Terms of Service</span></div>
+</footer>
+</body></html>
